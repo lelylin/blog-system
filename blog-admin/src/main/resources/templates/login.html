@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" th:href="@{/static/css/login/basic.css}">
+    <link rel="stylesheet" th:href="@{/static/css/login/login.css}">
+    <script th:src="@{/static/js/jQuery/jquery-3.3.1.js}"></script>
+    <script type="text/javascript" th:src="@{/static/js/login/basic.js}"></script>
+    <script type="text/javascript" th:src="@{/static/js/login/app.js}"></script>
+    <script type="text/javascript" th:src="@{/static/js/login/particles.js}"></script>
+    <title>登录</title>
+
+</head>
+<body>
+<div class="pagewrap">
+    <div class="main" id="screen">
+        <div class="login-page dsj-login">
+            <h3 class="platform-name">
+                <i class="ico ico-logo"></i>
+                后台管理系统
+            </h3>
+            <div class="login-block">
+                <div class="login-pop">
+                    <div class="login-body clearfix">
+                        <div class="login-info">
+                            <!--/*@thymesVar id="message" type="templates"*/-->
+                            <input id="message" th:value="${message}" type="hidden">
+                            <div class="form-error">
+                                <div id="msg-error" class="msg-error">
+                                    <i class="btn btn-error"></i>
+                                </div>
+                            </div>
+                            <form action="checkLogin" method="post" onsubmit="return checkLogin()">
+                            <!--<from action="checkLogin" method="post">-->
+                                <div class="form-list">
+                                    <div class="li">
+                                        <div class="ele-wrap">
+                                            <!--/*@thymesVar id="userName" type="templates"*/-->
+                                            <input type="text" id="logName" name="logName" class="form-control" th:value="${logName}"
+                                                   placeholder="请输入用户名/邮箱/手机号" onblur="LoginPrompt('请输入用户名','logName')">
+                                        </div>
+                                    </div>
+                                    <div class="li">
+                                        <div class="ele-wrap">
+                                            <input type="password" id="logPass" name="logPass" class="form-control"
+                                                   placeholder="请输入密码" onblur="LoginPrompt('请输入密码','logPass')">
+                                        </div>
+                                    </div>
+                                    <div class="li">
+                                        <div class="ele-wrap">
+                                            <div class="code-img">
+                                                <img onclick="getVerify(this)" src="/getVerify">
+                                            </div>
+                                            <div class="proving-code">
+                                                <!--/*@thymesVar id="logVerify" type="templates"*/-->
+                                                <input type="text" id="logVerify" name="logVerify" class="form-control" th:value="${logVerify}"
+                                                       placeholder="验证码" onblur="LoginPrompt('请输入验证码','logVerify')">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="li">
+                                        <div class="ele-wrap">
+                                            <!--<a class="btn btn-blue"  href="javascript:checkLogin();">登 录</a>-->
+                                            <input class="btn btn-blue" type="submit" name="submit" value="登录"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-record">
+                Copyright © 2005-2018 027soft.cn 版权所有
+                <a class="record-num" target="_blank" href="http://www.miitbeian.gov.cn">
+                    <img th:src="@{/static/images/login/icp.png}"/>
+                    <span>鄂ICP备18000674号</span>
+                </a>
+                <a class="record-num" target="_blank"
+                   href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42018502000754">
+                    <img th:src="@{/static/images/login/record_img.jpg}"/>
+                    <span>鄂公网安备 42018502000754号</span>
+                </a>
+            </div>
+        </div>
+        <div id="particles-js"></div>
+    </div>
+</div>
+
+<script>
+        $(function () {
+            var msgError = $("#msg-error");
+            var message = $("#message").val();
+            console.log(message);
+            if(message){
+                msgError.css({
+                    "display": "block"
+                });
+                msgError.html(message);
+            }
+        });
+
+    //获取验证码
+    function getVerify(obj) {
+        obj.src = "/getVerify?" + Math.random();
+    }
+
+/*    $.ajax({
+        url: "/checkLogin",
+        type: "post",
+        data: {"logName":logName,"logPass":logPass,"logVerify":logVerify},
+        dataType: "json",
+        async: false,
+        success: function (data) {
+            window.location.href = "/html/index.html";
+        },
+        error: function () {
+            alert("删除失败,请稍后重试...");
+        }
+    });*/
+
+    function LoginPrompt(msg, id) {
+        var inputValue = $.trim($("#" + id).val());
+        var msgError = $("#msg-error");
+        if (inputValue == "" || inputValue == null) {
+            msgError.html(msg);
+            msgError.css({
+                "display": "block"
+            });
+        } else {
+            msgError.css({
+                "display": "none"
+            });
+        }
+    }
+
+    function checkLogin() {
+        var logName = $.trim($("#logName").val());
+        var logPass = $.trim($("#logPass").val());
+        var logVerify = $.trim($("#logVerify").val());
+        if (logName == "" || logName == null) {
+            LoginPrompt("请输入用户名");
+            return false;
+        }
+        if (logPass == "" || logPass == null) {
+            LoginPrompt("请输入密码");
+            return false;
+        }
+        if (logVerify == "" || logVerify == null) {
+            LoginPrompt("请输入验证码");
+            return false;
+        }
+        return true;
+    }
+
+</script>
+</body>
+</html>

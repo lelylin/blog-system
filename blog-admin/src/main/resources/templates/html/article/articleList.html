@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" th:href="@{/static/js/layui-v2.4.5/css/layui.css}">
+    <script th:src="@{/static/js/jQuery/jquery-3.3.1.js}"></script>
+    <script th:src="@{/static/js/layui-v2.4.5/layui.js}" charset="utf-8"></script>
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <div class="layui-header" id="layui-header">
+        <div class="layui-logo">Danny博客</div>
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item"><a href="/index">Hi,Danny</a></li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item"><a href="/index">控制台</a></li>
+            <li class="layui-nav-item"><a href="/index">博客首页</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    Danny
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                    <dd><a href="">切换账号</a></dd>
+                    <dd><a href="">退出登录</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <!--列表展开状态-->
+                <!--<li class="layui-nav-item layui-nav-itemed">-->
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">文章管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/articleSort/articleSortList">文章分类</a></dd>
+                        <dd class="layui-this"><a href="/article/articleList">文章列表</a></dd>
+                        <dd><a href="">文章发布</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">用户管理</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">解决方案</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">列表一</a></dd>
+                        <dd><a href="javascript:;">列表二</a></dd>
+                        <dd><a href="">超链接</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">评价管理</a></li>
+                <li class="layui-nav-item"><a href="">文章发布</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 内容主体区域 -->
+    <div class="layui-body">
+        <div>
+            <div style="padding: 15px;">
+                <div class="layui-row layui-col-space15">
+                    <div class="layui-col-md12">
+                        <div class="layui-card">
+                            <div class="layui-card-header">文章列表</div>
+                            <div class="layui-card-body">
+                                <fieldset class="layui-elem-field site-demo-button">
+                                    <div>
+                                        <button class="layui-btn layui-btn-radius" id="addArticle">添加文章</button>
+                                        <button class="layui-btn layui-btn-normal layui-btn-radius">发布文章</button>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md12">
+                        <div class="layui-card">
+                            <div class="layui-form">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">文章名称:</label>
+                                    <div class="layui-input-inline">
+                                        <input class="layui-input" name="id" id="articleName" autocomplete="off">
+                                    </div>
+
+                                    <label class="layui-form-label">文章分类:</label>
+                                    <div class="layui-input-inline">
+                                        <select id="sortArticleId" name="label" style="height: 38px;border-width:1px;border-style: solid;width: 190px">
+                                            <option value="">请选择分类</option>
+                                            <option th:each="articleSort : ${articleSorts}"
+                                                    th:value="${articleSort.getSortArticleId()}"
+                                                    th:text="${articleSort.getSortArticleName()}">
+                                                sortArticleName
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <label class="layui-form-label">作者:</label>
+                                    <div class="layui-input-inline">
+                                        <input class="layui-input" name="id" id="userId" autocomplete="off">
+                                    </div>
+                                    <div class="layui-inline">
+                                        <button class="layui-btn" id="articleReload"  data-type="reload">搜索</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="layui-hide" id="articleList" lay-filter="articleList"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部固定区域 -->
+    <!--<div class="layui-footer">
+        © dannylin.com - 底部固定区域
+    </div>-->
+</div>
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+</script>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function () {
+        var element = layui.element;
+    });
+
+    layui.use('table', function () {
+        var table = layui.table;
+
+        table.render({
+            elem: '#articleList',
+            url: '/article/articleJson',
+            title: '文章列表',
+            cols: [
+                [
+                    //{type: 'checkbox', fixed: 'left'},
+                    {field: 'articleName', title: '文章名称', edit: 'text'},
+                    {field: 'articleSummary', title: '文章摘要', edit: 'text'},
+                    {field: 'userId', title: '作者', edit: 'text'},
+                    {field: 'createTime', title: '创建时间',templet: "<div>{{layui.util.toDateString(d.ordertime, 'yyyy-MM-dd')}}</div>"},
+                    {field: 'sortArticleId', title: '所属分类'},
+                    {field: 'articleUp', title: '是否置顶'},
+                    {field: 'articleType', title: '是否公开'},
+                    {field: 'articleSupport', title: '是否博主推荐'},
+                    {field: 'articleClick', title: '查看人数', sort: true},
+                    {fixed: 'right', title: '操作', toolbar: '#barDemo', width: 150}
+                ]
+            ],
+            page: true
+        });
+
+        //监听行工具事件
+        table.on('tool(articleList)', function (obj) {
+            if (obj.event === 'del') {
+                layer.confirm('确定删除该数据?', function (index) {
+                    $.ajax({
+                        url: "/article/deleteArticle",
+                        type: "post",
+                        data: {"articleId": obj.data.articleId},
+                        dataType: "json",
+                        async: false,
+                        success: function (data) {
+                            layer.close(index);
+                            if (0 == data.code) {
+                                obj.del();
+                                table.reload('articleList', {
+                                    url: '/article/articleJson',
+                                    where: {}, //设定异步数据接口的额外参数
+                                    //height: 300
+                                });
+                            } else {
+                                layer.alert("删除失败,请稍后重试...");
+                            }
+                        },
+                        error: function () {
+                            alert("加载失败,请稍后重试...");
+                        }
+                    });
+                });
+            } else if (obj.event === 'edit') {
+                window.location.href = "/article/editArticle?articleId=" + obj.data.articleId;
+            }else if(obj.event === 'detail'){
+                window.location.href = "/article/viewArticle?articleId=" + obj.data.articleId;
+            }
+        });
+
+        /**
+         * 根据文章名称、文章分类、作者查询数据列表
+         */
+        $('#articleReload').on('click', function () {
+            table.reload('articleList', {
+                url: '/article/articleJson',
+                where: {
+                    "articleName":$('#articleName').val(),
+                    "sortArticleId":$('#sortArticleId').val(),
+                    "userId":$('#userId').val(),
+                }, //设定异步数据接口的额外参数
+                //height: 300
+            });
+        });
+    });
+
+    $('#addArticle').on('click', function () {
+        window.location.href = "/article/addArticle";
+    });
+
+</script>
+</body>
+</html>

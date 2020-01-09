@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.danny.blog.dao.ArticleMapper">
+
+    <resultMap id="BaseResultMap" type="com.danny.blog.entity.Article">
+        <id column="article_id" jdbcType="CHAR" property="articleId"/>
+        <result column="article_name" jdbcType="VARCHAR" property="articleName"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="edit_time" jdbcType="TIMESTAMP" property="editTime"/>
+        <result column="article_ip" jdbcType="VARCHAR" property="articleIp"/>
+        <result column="article_click" jdbcType="BIGINT" property="articleClick"/>
+        <result column="sort_article_id" jdbcType="CHAR" property="sortArticleId"/>
+        <result column="user_id" jdbcType="CHAR" property="userId"/>
+        <result column="type_id" jdbcType="CHAR" property="typeId"/>
+        <result column="article_type" jdbcType="INTEGER" property="articleType"/>
+        <result column="article_up" jdbcType="INTEGER" property="articleUp"/>
+        <result column="article_support" jdbcType="INTEGER" property="articleSupport"/>
+        <result column="article_summary" jdbcType="VARCHAR" property="articleSummary"/>
+    </resultMap>
+
+    <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.danny.blog.entity.Article">
+        <result column="article_content" jdbcType="LONGVARCHAR" property="articleContent"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+    article_id, article_name, create_time, edit_time, article_ip, article_click, sort_article_id,
+    user_id, type_id, article_type, article_up, article_support, article_summary
+  </sql>
+
+    <sql id="Blob_Column_List">
+    article_content
+  </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from article
+        where article_id = #{articleId,jdbcType=CHAR}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from article
+    where article_id = #{articleId,jdbcType=CHAR}
+  </delete>
+
+    <insert id="insert" parameterType="com.danny.blog.entity.Article">
+    insert into article (article_id, article_name, create_time,
+      edit_time, article_ip, article_click,
+      sort_article_id, user_id, type_id,
+      article_type, article_up, article_support,
+      article_summary, article_content)
+    values (#{articleId,jdbcType=CHAR}, #{articleName,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP},
+      #{editTime,jdbcType=TIMESTAMP}, #{articleIp,jdbcType=VARCHAR}, #{articleClick,jdbcType=BIGINT},
+      #{sortArticleId,jdbcType=CHAR}, #{userId,jdbcType=CHAR}, #{typeId,jdbcType=CHAR},
+      #{articleType,jdbcType=INTEGER}, #{articleUp,jdbcType=INTEGER}, #{articleSupport,jdbcType=INTEGER},
+      #{articleSummary,jdbcType=VARCHAR}, #{articleContent,jdbcType=LONGVARCHAR})
+  </insert>
+
+    <insert id="insertSelective" parameterType="com.danny.blog.entity.Article">
+        insert into article
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="articleId != null">
+                article_id,
+            </if>
+            <if test="articleName != null">
+                article_name,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="editTime != null">
+                edit_time,
+            </if>
+            <if test="articleIp != null">
+                article_ip,
+            </if>
+            <if test="articleClick != null">
+                article_click,
+            </if>
+            <if test="sortArticleId != null">
+                sort_article_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="typeId != null">
+                type_id,
+            </if>
+            <if test="articleType != null">
+                article_type,
+            </if>
+            <if test="articleUp != null">
+                article_up,
+            </if>
+            <if test="articleSupport != null">
+                article_support,
+            </if>
+            <if test="articleSummary != null">
+                article_summary,
+            </if>
+            <if test="articleContent != null">
+                article_content,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="articleId != null">
+                #{articleId,jdbcType=CHAR},
+            </if>
+            <if test="articleName != null">
+                #{articleName,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="editTime != null">
+                #{editTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="articleIp != null">
+                #{articleIp,jdbcType=VARCHAR},
+            </if>
+            <if test="articleClick != null">
+                #{articleClick,jdbcType=BIGINT},
+            </if>
+            <if test="sortArticleId != null">
+                #{sortArticleId,jdbcType=CHAR},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=CHAR},
+            </if>
+            <if test="typeId != null">
+                #{typeId,jdbcType=CHAR},
+            </if>
+            <if test="articleType != null">
+                #{articleType,jdbcType=INTEGER},
+            </if>
+            <if test="articleUp != null">
+                #{articleUp,jdbcType=INTEGER},
+            </if>
+            <if test="articleSupport != null">
+                #{articleSupport,jdbcType=INTEGER},
+            </if>
+            <if test="articleSummary != null">
+                #{articleSummary,jdbcType=VARCHAR},
+            </if>
+            <if test="articleContent != null">
+                #{articleContent,jdbcType=LONGVARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.danny.blog.entity.Article">
+        update article
+        <set>
+            <if test="articleName != null">
+                article_name = #{articleName,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="editTime != null">
+                edit_time = #{editTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="articleIp != null">
+                article_ip = #{articleIp,jdbcType=VARCHAR},
+            </if>
+            <if test="articleClick != null">
+                article_click = #{articleClick,jdbcType=BIGINT},
+            </if>
+            <if test="sortArticleId != null">
+                sort_article_id = #{sortArticleId,jdbcType=CHAR},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=CHAR},
+            </if>
+            <if test="typeId != null">
+                type_id = #{typeId,jdbcType=CHAR},
+            </if>
+            <if test="articleType != null">
+                article_type = #{articleType,jdbcType=INTEGER},
+            </if>
+            <if test="articleUp != null">
+                article_up = #{articleUp,jdbcType=INTEGER},
+            </if>
+            <if test="articleSupport != null">
+                article_support = #{articleSupport,jdbcType=INTEGER},
+            </if>
+            <if test="articleSummary != null">
+                article_summary = #{articleSummary,jdbcType=VARCHAR},
+            </if>
+            <if test="articleContent != null">
+                article_content = #{articleContent,jdbcType=LONGVARCHAR},
+            </if>
+        </set>
+        where article_id = #{articleId,jdbcType=CHAR}
+    </update>
+
+    <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.danny.blog.entity.Article">
+    update article
+    set article_name = #{articleName,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      edit_time = #{editTime,jdbcType=TIMESTAMP},
+      article_ip = #{articleIp,jdbcType=VARCHAR},
+      article_click = #{articleClick,jdbcType=BIGINT},
+      sort_article_id = #{sortArticleId,jdbcType=CHAR},
+      user_id = #{userId,jdbcType=CHAR},
+      type_id = #{typeId,jdbcType=CHAR},
+      article_type = #{articleType,jdbcType=INTEGER},
+      article_up = #{articleUp,jdbcType=INTEGER},
+      article_support = #{articleSupport,jdbcType=INTEGER},
+      article_summary = #{articleSummary,jdbcType=VARCHAR},
+      article_content = #{articleContent,jdbcType=LONGVARCHAR}
+    where article_id = #{articleId,jdbcType=CHAR}
+  </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.danny.blog.entity.Article">
+    update article
+    set article_name = #{articleName,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      edit_time = #{editTime,jdbcType=TIMESTAMP},
+      article_ip = #{articleIp,jdbcType=VARCHAR},
+      article_click = #{articleClick,jdbcType=BIGINT},
+      sort_article_id = #{sortArticleId,jdbcType=CHAR},
+      user_id = #{userId,jdbcType=CHAR},
+      type_id = #{typeId,jdbcType=CHAR},
+      article_type = #{articleType,jdbcType=INTEGER},
+      article_up = #{articleUp,jdbcType=INTEGER},
+      article_support = #{articleSupport,jdbcType=INTEGER},
+      article_summary = #{articleSummary,jdbcType=VARCHAR}
+    where article_id = #{articleId,jdbcType=CHAR}
+  </update>
+
+    <!--分页查询-->
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from article
+        where 1 = 1
+        <if test="articleId != null">
+            and article_id = #{articleId,jdbcType=CHAR}
+        </if>
+        <if test="articleName != null">
+            and article_name like concat(#{articleName,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="createTime != null">
+            and create_time = #{createTime,jdbcType=TIMESTAMP}
+        </if>
+        <if test="editTime != null">
+            and edit_time = #{editTime,jdbcType=TIMESTAMP}
+        </if>
+        <if test="articleIp != null">
+            and article_ip = #{articleIp,jdbcType=VARCHAR}
+        </if>
+        <if test="articleClick != null">
+            and article_click = #{articleClick,jdbcType=BIGINT}
+        </if>
+        <if test="sortArticleId != null and sortArticleId != ''">
+            and sort_article_id = #{sortArticleId,jdbcType=CHAR}
+        </if>
+        <if test="userId != null and userId != ''">
+            and user_id = #{userId,jdbcType=CHAR}
+        </if>
+        <if test="typeId != null">
+            and type_id = #{typeId,jdbcType=CHAR}
+        </if>
+        <if test="articleType != null">
+            and article_type = #{articleType,jdbcType=INTEGER}
+        </if>
+        <if test="articleUp != null">
+            and article_up = #{articleUp,jdbcType=INTEGER}
+        </if>
+        <if test="articleSupport != null">
+            and article_support = #{articleSupport,jdbcType=INTEGER}
+        </if>
+        <if test="articleSummary != null">
+            and article_summary = #{articleSummary,jdbcType=VARCHAR}
+        </if>
+        <if test="articleContent != null">
+            and article_content = #{articleContent,jdbcType=LONGVARCHAR}
+        </if>
+    </select>
+
+    <!--查询文章总数-->
+    <select id="selectCount" resultType="int">
+        select
+        count(*)
+        from article
+    </select>
+
+</mapper>

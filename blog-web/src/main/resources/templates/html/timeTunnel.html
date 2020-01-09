@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Danny博客</title>
+    <meta name="keywords" content="blog"/>
+    <meta name="description" content="blog"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/static/css/base.css}" rel="stylesheet">
+    <link th:href="@{/static/css/m.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/static/css/dasky.min.css}"/>
+
+    <script th:src="@{/static/js/jquery-1.8.3.min.js}"></script>
+    <script th:src="@{/static/js/head.js}"></script>
+    <script th:src="@{/static/js/comm.js}"></script>
+    <script th:src="@{/static/js/sidebar.js}"></script>
+    <script th:src="@{/static/js/foot.js}"></script>
+    <!--[if lt IE 9]>
+    <script th::src="@{/static/js/modernizr.js}"></script>
+    <![endif]-->
+
+    <script type="text/javascript" th:src="@{/static/js/jmpress.min.js}"></script>
+    <script type="text/javascript" th:src="@{/static/js/dasky.eval.js}"></script>
+    <script type="text/javascript" >
+        $(function () {
+            $('#dasky').Dasky()
+        });
+    </script>
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #dasky {
+            font-family: 'Droid Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<!--top begin-->
+<header id="header"></header>
+<div class="searchbox"></div>
+<!--top end-->
+<div id="dasky">
+    <div class="step year">
+        <div class="dsk-titlenode">2012</div>
+        <div class="dsk-content">
+            <p class="dsk-year-info">一个时间表滑块。</p>
+        </div>
+    </div>
+    <div class="step">
+        <div class="dsk-circle">05/01</div>
+        <h2 class="dsk-circle-title">daskey时间轴滑块</h2>
+        <div class="dsk-content">
+            <div class="dsk-info">
+                <h2>daskey时间轴滑块</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exerc...
+                </p>
+                <a href="#" class="dsk-link">查看更多</a>
+            </div>
+            <img th:src="@{/static/images/b01.jpg}" alt=""/>
+        </div>
+    </div>
+    <div class="step">
+        <div class="dsk-circle">12/16</div>
+        <h2 class="dsk-circle-title">时尚的外观</h2>
+        <div class="dsk-content">
+            <div class="dsk-info">
+                <h2>时尚的外观</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exerc...
+                </p>
+                <a href="#" class="dsk-link">查看更多</a>
+            </div>
+            <img th:src="@{/static/images/b02.jpg}" alt=""/>
+        </div>
+    </div>
+    <div class="step year">
+        <div class="dsk-titlenode">2013</div>
+        <div class="dsk-content">
+            <p class="dsk-year-info">使用产品的时间轴，展示等！</p>
+        </div>
+    </div>
+    <div class="step">
+        <div class="dsk-circle">01/20</div>
+        <h2 class="dsk-circle-title">回退到旧浏览器</h2>
+        <div class="dsk-content">
+            <div class="dsk-info">
+                <h2>回退到旧浏览器</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exerc...
+                </p>
+                <a href="#" class="dsk-link">查看更多</a>
+            </div>
+            <img th:src="@{/static/images/b03.jpg}" alt=""/>
+        </div>
+    </div>
+    <div class="step">
+        <div class="dsk-circle">07/15</div>
+        <h2 class="dsk-circle-title">CSS3动画</h2>
+        <div class="dsk-content">
+            <div class="dsk-info">
+                <h2>CSS3动画</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exerc...
+                </p>
+                <a href="#" class="dsk-link">查看更多</a>
+            </div>
+            <img th:src="@{/static/images/b04.jpg}" alt=""/>
+        </div>
+    </div>
+    <div class="step">
+        <div class="dsk-circle">11/03</div>
+        <h2 class="dsk-circle-title">容易使用</h2>
+        <div class="dsk-content">
+            <div class="dsk-info">
+                <h2>容易使用</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exerc...
+                </p>
+                <a href="#" class="dsk-link">查看更多</a>
+            </div>
+            <img th:src="@{/static/images/b05.jpg}" alt=""/>
+        </div>
+    </div>
+</div>
+
+<footer id="foot"></footer>
+</body>
+</html>

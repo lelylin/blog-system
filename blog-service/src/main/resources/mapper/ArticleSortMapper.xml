@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.danny.blog.dao.ArticleSortMapper">
+
+    <resultMap id="BaseResultMap" type="com.danny.blog.entity.ArticleSort">
+        <id column="sort_article_id" jdbcType="CHAR" property="sortArticleId"/>
+        <result column="creat_time" jdbcType="TIMESTAMP" property="creatTime"/>
+        <result column="sort_article_name" jdbcType="VARCHAR" property="sortArticleName"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+      sort_article_id, creat_time, sort_article_name
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from article_sort
+        where sort_article_id = #{sortArticleId,jdbcType=CHAR}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from article_sort
+    where sort_article_id = #{sortArticleId,jdbcType=CHAR}
+  </delete>
+
+    <insert id="insert" parameterType="com.danny.blog.entity.ArticleSort">
+    insert into article_sort
+    (sort_article_id, creat_time, sort_article_name)
+    values
+    (#{sortArticleId,jdbcType=CHAR}, #{creatTime,jdbcType=TIMESTAMP},
+    #{sortArticleName,jdbcType=VARCHAR})
+  </insert>
+
+    <insert id="insertSelective" parameterType="com.danny.blog.entity.ArticleSort">
+        insert into article_sort
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="sortArticleId != null">
+                sort_article_id,
+            </if>
+            <if test="creatTime != null">
+                creat_time,
+            </if>
+            <if test="sortArticleName != null">
+                sort_article_name,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="sortArticleId != null">
+                #{sortArticleId,jdbcType=CHAR},
+            </if>
+            <if test="creatTime != null">
+                #{creatTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="sortArticleName != null">
+                #{sortArticleName,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.danny.blog.entity.ArticleSort">
+        update article_sort
+        <set>
+            <if test="creatTime != null">
+                creat_time = #{creatTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="sortArticleName != null">
+                sort_article_name = #{sortArticleName,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where sort_article_id = #{sortArticleId,jdbcType=CHAR}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.danny.blog.entity.ArticleSort">
+    update article_sort
+    set creat_time = #{creatTime,jdbcType=TIMESTAMP},
+      sort_article_name = #{sortArticleName,jdbcType=VARCHAR}
+    where sort_article_id = #{sortArticleId,jdbcType=CHAR}
+  </update>
+
+    <!--查询文章分类-->
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from article_sort
+        where 1=1
+        <if test="sortArticleId != null">
+            and sort_article_id = #{sortArticleId,jdbcType=CHAR}
+        </if>
+        <if test="creatTime != null">
+            and creat_time = #{creatTime,jdbcType=TIMESTAMP}
+        </if>
+        <if test="sortArticleName != null">
+            and sort_article_name like concat(#{sortArticleName,jdbcType=VARCHAR},'%')
+        </if>
+    </select>
+
+    <!--查询文章分类总数-->
+    <select id="selectCount" resultType="int">
+        select
+        count(*)
+        from article_sort
+    </select>
+
+</mapper>

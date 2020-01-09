@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="872ffffc-4eea-4bab-add5-2dd03c46b5ba" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/blog-admin/target/" />
+    <ignored path="$PROJECT_DIR$/blog-web/target/" />
+    <ignored path="$PROJECT_DIR$/blog-service/target/" />
+    <ignored path="$PROJECT_DIR$/blog-common/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/blog-entity/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="877592669">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="html" value="3" />
+          <entry key="properties" value="2" />
+          <entry key="xml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="HTML" value="3" />
+          <entry key="Properties" value="2" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog-admin/src/main/resources/templates/html/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog-admin/src/main/resources/templates/html/articleSort/articleSort.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog-admin/src/main/resources/templates/html/article/addArticle.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4700">
+              <caret line="188" column="53" selection-start-line="188" selection-start-column="53" selection-end-line="188" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blog-web/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog-web/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="30" selection-start-line="30" selection-end-line="33" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog-web/src/main/resources/application-dev.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog-web/src/main/resources/logback.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.13/mysql-connector-java-8.0.13.jar!/com/mysql/cj/jdbc/Driver.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog-web/src/main/resources/mybatis_config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Interface" />
+        <option value="JavaScript File" />
+        <option value="Enum" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>layui-col-md6</find>
+      <find>site-demo-button</find>
+      <find>layui-elem-field</find>
+      <find>.layui-elem-field</find>
+      <find>.layui-card-header</find>
+      <find>.layui-col-md6</find>
+      <find>layui-col-md12</find>
+      <find>layui-card</find>
+      <find>layui-body</find>
+      <find>layui-this</find>
+      <find>.layui-tab-title</find>
+      <find>layui-layer-title</find>
+      <find>createTime</find>
+      <find>indexData</find>
+      <find>layui-inline</find>
+      <find>layui-input</find>
+      <find>three</find>
+      <find>layui-input-inline</find>
+      <find>imageUrlPrefix</find>
+      <find>getConfigPath()</find>
+      <find>serverUrl</find>
+      <find>.layui-textarea</find>
+      <find>layui-hide</find>
+      <find>updateByPrimaryKey</find>
+      <find>layui-input-block</find>
+      <find>ajax</find>
+      <find>deleteArticle</find>
+      <find>分页</find>
+      <find>pagehelper</find>
+      <find>/article/deleteArticle</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>userLastLoginTime</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/blog-admin/src/main/resources/templates/html/article/addArticle.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\mavendata\repository" />
+        <option name="mavenHome" value="D:/Program Files/apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="D:\maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1372" />
+    <option name="height" value="754" />
+  </component>
+  <component name="ProjectId" id="1Slw4XZVoowCACrCCxGUbf1Niby" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>CodeSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+          <State>
+            <id>Thymeleaf</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>ThymeleafVariablesResolveInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog-system" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568295756127" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.24252874" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\blog-system\blog-admin\src\main\resources\templates\html\article" />
+      <recent name="D:\IdeaProjects\blog-system\blog-admin\src\main\resources\static\js\errorpage" />
+      <recent name="D:\IdeaProjects\blog-system\blog-admin\src\main\resources\static\css\errorpage" />
+      <recent name="D:\IdeaProjects\blog-system\blog-admin\src\main\resources\static\images\errorpage" />
+      <recent name="D:\IdeaProjects\blog-system\blog-admin\src\main\resources\static\css" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.danny.blog.common" />
+      <recent name="com.danny.blog.exception" />
+      <recent name="com.danny.blog.dao" />
+      <recent name="com.danny.blog.entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\blog-system\blog-admin\src\main\resources\static\css\login\login" />
+      <recent name="D:\IdeaProjects\blog-system\blog-admin\src\main\resources\templates\html\article" />
+      <recent name="D:\IdeaProjects\blog-system\blog-admin\src\main\resources\templates\html\articleSort" />
+      <recent name="D:\IdeaProjects\blog-system\blog-admin\src\main\resources\static\js\layui" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.11742424" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.BlogAdminApplication">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileNioUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.danny.blog.utils.file.FileNioUtil" />
+      <module name="blog-common" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.danny.blog.utils.file.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="blog-admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.danny.blog.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.danny.blog.BlogAdminApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blog-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.danny.blog.BlogWebApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BlogWebApplication" />
+      <item itemvalue="Application.FileNioUtil" />
+      <item itemvalue="Spring Boot.BlogAdminApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.BlogAdminApplication" />
+        <item itemvalue="Application.FileNioUtil" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Danny\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="872ffffc-4eea-4bab-add5-2dd03c46b5ba" name="Default Changelist" comment="" />
+      <created>1546701522859</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546701522859</updated>
+      <workItem from="1546701535490" duration="1860000" />
+      <workItem from="1546777398857" duration="4754000" />
+      <workItem from="1546867833257" duration="6248000" />
+      <workItem from="1546932836390" duration="661000" />
+      <workItem from="4070945345118" duration="189000" />
+      <workItem from="4070959903370" duration="138000" />
+      <workItem from="4070960296119" duration="104000" />
+      <workItem from="4070960862212" duration="177000" />
+      <workItem from="1547217148341" duration="87000" />
+      <workItem from="1547217286540" duration="871000" />
+      <workItem from="1547220024755" duration="280000" />
+      <workItem from="1547220643526" duration="114000" />
+      <workItem from="1547220865501" duration="85000" />
+      <workItem from="1547221041335" duration="18000" />
+      <workItem from="1547221237140" duration="38000" />
+      <workItem from="1547648556896" duration="179000" />
+      <workItem from="1547648827090" duration="1065000" />
+      <workItem from="1547688759845" duration="132000" />
+      <workItem from="1547711076913" duration="8092000" />
+      <workItem from="1547722189601" duration="162000" />
+      <workItem from="1547773161620" duration="9827000" />
+      <workItem from="1547881605697" duration="6779000" />
+      <workItem from="1547960252183" duration="2110000" />
+      <workItem from="1548042811786" duration="10707000" />
+      <workItem from="1548064228791" duration="310000" />
+      <workItem from="1548064589796" duration="1887000" />
+      <workItem from="1548078802471" duration="4748000" />
+      <workItem from="1548127526107" duration="20003000" />
+      <workItem from="1548159213065" duration="3814000" />
+      <workItem from="1548205319510" duration="843000" />
+      <workItem from="1548213842179" duration="5654000" />
+      <workItem from="1548247386095" duration="7113000" />
+      <workItem from="1548291309934" duration="1939000" />
+      <workItem from="1548293548350" duration="10434000" />
+      <workItem from="1548387721550" duration="6957000" />
+      <workItem from="1549846263543" duration="1349000" />
+      <workItem from="1549956827056" duration="4649000" />
+      <workItem from="1549977003935" duration="9432000" />
+      <workItem from="1550018579713" duration="1628000" />
+      <workItem from="1550028682906" duration="15475000" />
+      <workItem from="1550061988578" duration="4903000" />
+      <workItem from="1550105296374" duration="1085000" />
+      <workItem from="1550236487948" duration="940000" />
+      <workItem from="1550710103900" duration="22000" />
+      <workItem from="1551075644700" duration="1140000" />
+      <workItem from="1551142199663" duration="248000" />
+      <workItem from="1551143295693" duration="58000" />
+      <workItem from="1551877988438" duration="889000" />
+      <workItem from="1551970679050" duration="612000" />
+      <workItem from="1552527954053" duration="1808000" />
+      <workItem from="1552634953464" duration="7113000" />
+      <workItem from="1552870870351" duration="11620000" />
+      <workItem from="1552958449867" duration="8181000" />
+      <workItem from="1553045591299" duration="9621000" />
+      <workItem from="1553222532617" duration="594000" />
+      <workItem from="1553234751869" duration="9984000" />
+      <workItem from="1553429800657" duration="4721000" />
+      <workItem from="1553475323479" duration="4763000" />
+      <workItem from="1553494204987" duration="2500000" />
+      <workItem from="1553497720657" duration="1226000" />
+      <workItem from="1553510780575" duration="4914000" />
+      <workItem from="1553561742952" duration="620000" />
+      <workItem from="1553579178138" duration="599000" />
+      <workItem from="1553587927593" duration="1738000" />
+      <workItem from="1553601436345" duration="1440000" />
+      <workItem from="1553602948697" duration="2046000" />
+      <workItem from="1553607923740" duration="5891000" />
+      <workItem from="1553648009642" duration="674000" />
+      <workItem from="1553661784633" duration="2446000" />
+      <workItem from="1553691817525" duration="2792000" />
+      <workItem from="1553844107568" duration="4198000" />
+      <workItem from="1553857912694" duration="12642000" />
+      <workItem from="1553913074974" duration="362000" />
+      <workItem from="1553915329719" duration="4345000" />
+      <workItem from="1553937710014" duration="8522000" />
+      <workItem from="1554553302516" duration="10346000" />
+      <workItem from="1554639294886" duration="7781000" />
+      <workItem from="1554686614345" duration="7541000" />
+      <workItem from="1554710875523" duration="7210000" />
+      <workItem from="1554727173711" duration="5802000" />
+      <workItem from="1554771497500" duration="2550000" />
+      <workItem from="1554815289060" duration="7809000" />
+      <workItem from="1554826202408" duration="68000" />
+      <workItem from="1554857993992" duration="1507000" />
+      <workItem from="1554863204526" duration="6983000" />
+      <workItem from="1554886256862" duration="1948000" />
+      <workItem from="1554898949614" duration="10880000" />
+      <workItem from="1554943884274" duration="4438000" />
+      <workItem from="1554977644330" duration="188000" />
+      <workItem from="1554988889912" duration="7768000" />
+      <workItem from="1555030421427" duration="2090000" />
+      <workItem from="1555129169556" duration="592000" />
+      <workItem from="1555217616579" duration="1516000" />
+      <workItem from="1555292782440" duration="6809000" />
+      <workItem from="1555316386294" duration="8970000" />
+      <workItem from="1555332508941" duration="11376000" />
+      <workItem from="1555376316223" duration="10357000" />
+      <workItem from="1555395841361" duration="11828000" />
+      <workItem from="1555594631259" duration="6716000" />
+      <workItem from="1555603503971" duration="694000" />
+      <workItem from="1555635518721" duration="11112000" />
+      <workItem from="1555659282142" duration="7736000" />
+      <workItem from="1555676943606" duration="8078000" />
+      <workItem from="1555852470605" duration="6157000" />
+      <workItem from="1555895047016" duration="2125000" />
+      <workItem from="1555915033340" duration="2635000" />
+      <workItem from="1556021691456" duration="1689000" />
+      <workItem from="1556594094820" duration="9465000" />
+      <workItem from="1556626572325" duration="1759000" />
+      <workItem from="1557670705196" duration="1665000" />
+      <workItem from="1557714654978" duration="3126000" />
+      <workItem from="1557841772970" duration="795000" />
+      <workItem from="1558323309596" duration="289000" />
+      <workItem from="1558421618001" duration="12000" />
+      <workItem from="1558796950513" duration="283000" />
+      <workItem from="1560176644509" duration="6291000" />
+      <workItem from="1560214799089" duration="4253000" />
+      <workItem from="1560239936940" duration="6373000" />
+      <workItem from="1560301549824" duration="139000" />
+      <workItem from="1560774107473" duration="5160000" />
+      <workItem from="1560779475054" duration="3592000" />
+      <workItem from="1560819710354" duration="683000" />
+      <workItem from="1560847057623" duration="4563000" />
+      <workItem from="1560866148500" duration="2499000" />
+      <workItem from="1560952999270" duration="2125000" />
+      <workItem from="1561035224377" duration="329000" />
+      <workItem from="1561708708654" duration="3061000" />
+      <workItem from="1561906493109" duration="129000" />
+      <workItem from="1561907012559" duration="62000" />
+      <workItem from="1562332081042" duration="156000" />
+      <workItem from="1562808407196" duration="2431000" />
+      <workItem from="1563969770274" duration="2451000" />
+      <workItem from="1564554387688" duration="23000" />
+      <workItem from="1566128957798" duration="2864000" />
+      <workItem from="1566132840149" duration="41000" />
+      <workItem from="1566135932634" duration="1758000" />
+      <workItem from="1566176741721" duration="596000" />
+      <workItem from="1566180876010" duration="245000" />
+      <workItem from="1566182376295" duration="599000" />
+      <workItem from="1566193794098" duration="524000" />
+      <workItem from="1566281558827" duration="433000" />
+      <workItem from="1566284009272" duration="61000" />
+      <workItem from="1566285069008" duration="502000" />
+      <workItem from="1566286496214" duration="1515000" />
+      <workItem from="1566478234466" duration="12000" />
+      <workItem from="1568107238186" duration="853000" />
+      <workItem from="1568109416745" duration="650000" />
+      <workItem from="1568119363027" duration="21000" />
+      <workItem from="1568185344874" duration="5000" />
+      <workItem from="1568185362668" duration="371000" />
+      <workItem from="1568268357167" duration="5335000" />
+      <workItem from="1568295099757" duration="615000" />
+      <workItem from="1568595503786" duration="1061000" />
+      <workItem from="1568598523882" duration="60000" />
+      <workItem from="1568600511232" duration="610000" />
+      <workItem from="1568602876904" duration="1117000" />
+      <workItem from="1568605757814" duration="2676000" />
+      <workItem from="1568621489779" duration="307000" />
+      <workItem from="1568624361108" duration="2572000" />
+      <workItem from="1568634501167" duration="529000" />
+      <workItem from="1568639143677" duration="599000" />
+      <workItem from="1568681935055" duration="62000" />
+      <workItem from="1568876557289" duration="964000" />
+      <workItem from="1568902825357" duration="648000" />
+      <workItem from="1568940586181" duration="288000" />
+      <workItem from="1568965220902" duration="702000" />
+      <workItem from="1569156367854" duration="1107000" />
+      <workItem from="1569200747619" duration="107000" />
+      <workItem from="1569294412839" duration="129000" />
+      <workItem from="1569295167288" duration="479000" />
+      <workItem from="1569478896024" duration="57000" />
+      <workItem from="1569493960884" duration="5043000" />
+      <workItem from="1569547760215" duration="1815000" />
+      <workItem from="1569564106326" duration="1272000" />
+      <workItem from="1570501468162" duration="738000" />
+      <workItem from="1570761095861" duration="726000" />
+      <workItem from="1570860457244" duration="25000" />
+      <workItem from="1570860966163" duration="169000" />
+      <workItem from="1572151303242" duration="3336000" />
+      <workItem from="1572224773949" duration="306000" />
+      <workItem from="1574414069726" duration="819000" />
+      <workItem from="1574836427972" duration="154000" />
+      <workItem from="1575252654045" duration="532000" />
+      <workItem from="1575945077785" duration="1772000" />
+      <workItem from="1575973806733" duration="670000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3947000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Problems" order="10" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="MyBatis Log" order="14" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.3290461" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.7009646" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="JSF" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="CDI" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/blog-admin/src/main/resources/templates/html/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-admin/src/main/resources/templates/html/articleSort/articleSort.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-admin/src/main/resources/templates/html/article/addArticle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4700">
+          <caret line="188" column="53" selection-start-line="188" selection-start-column="53" selection-end-line="188" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-web/src/main/resources/application-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-web/src/main/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.13/mysql-connector-java-8.0.13.jar!/com/mysql/cj/jdbc/Driver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-web/src/main/resources/mybatis_config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="30" selection-start-line="30" selection-end-line="33" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>blog-service:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.48735633" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.48735633" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.48735633" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.48735633" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>blog-common</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.24252874" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-core:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.48735633" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

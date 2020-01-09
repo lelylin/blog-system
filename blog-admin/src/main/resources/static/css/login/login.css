@@ -1,0 +1,422 @@
+/* 
+* @Author: Administrator
+* @Date:   2018-01-10 16:43:02
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-02-26 18:04:02
+*/
+/*公安备案 start*/
+.foot-record {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #646464;
+  font-size: 14px;
+  background:#f0f0f0;
+}
+.foot-record .record-num{
+  color: #646464;
+  font-size: 14px;
+}
+.foot-record .record-num img{
+  display: inline-block;
+  width:auto;
+  height:auto;
+  vertical-align: middle;
+  margin-top:-6px;
+}
+/*公安备案 end*/
+
+/*登录页面 start*/
+.ico-logo{
+  width:58px;
+  height:71px;
+  background:url(../../images/logo.png) 0 0 no-repeat;
+  background-size:100% 100%;
+  margin-right:10px;
+}
+.login-page{
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.login-page .login-block{
+  display: block;
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+}
+.login-block .login-pop{
+  width:400px;
+  min-height:100px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  z-index:100;
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,.8);
+}
+.login-pop .platform-name{
+  text-align: center;
+  color:#6D93DF;
+  font-size: 32px;
+  padding:30px 0;
+}
+.login-pop .login-body{
+  padding:15px 0;
+}
+.login-body .login-info,
+.login-body .login-right{
+  float:left;
+}
+.login-body .login-info{
+  width:400px;
+  padding:10px 0;
+  position: relative;
+}
+.login-info .form-error{
+  position: absolute;
+  top:-5px;
+  left:4px;
+  width:335px;
+  margin:0 30px;
+}
+.form-error .msg-error{
+  position: relative;
+  background: #ffebeb;
+  color: #e4393c;
+  border: 1px solid #faccc6;
+  padding: 3px 10px 3px 40px;
+  line-height: 16px;
+  height: auto;
+}
+.form-error .btn.btn-error{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  display: block;
+  margin-top: -8px;
+  width: 17px;
+  height: 17px;
+  overflow: hidden;
+  background: url(../../images/login/ico_erroe.png) 0 0 no-repeat;
+}
+.login-info .li{
+  padding:13px 30px;
+  border-left:4px solid transparent;
+}
+/*.login-info .li.focus{
+  background:rgba(242,246,249,.4);
+  border-left:4px solid #FFAA64;
+}*/
+.login-info .li .form-control{
+  width:100%;
+  height: 42px;
+  line-height:42px;
+  font-size:14px;
+  color: #555555;
+  padding:0px 10px 0 42px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: 0px 5px 6px 0 rgba(0,0,0,.05);
+  outline: none;
+}
+.login-info .li .ele-wrap{
+  position: relative;
+}
+.login-info .li .ele-wrap .ico-user,
+.login-info .li .ele-wrap .ico-password,
+.login-info .li .ele-wrap .ico-code{
+  position: absolute;
+  top:50%;
+  margin-top:-11px;
+  left:10px;
+  width:22px;
+  height:22px;
+}
+.login-info .li .ele-wrap .ico-user{
+  background:url(../../images/login/ico_user.png) 0 0 no-repeat;
+}
+.login-info .li .ele-wrap .ico-password{
+  background:url(../../images/login/ico_password.png) 0 0 no-repeat;
+}
+.login-info .li .ele-wrap .ico-code{
+  background:url(../../images/login/ico_code.png) 0 0 no-repeat;
+}
+.login-info .li .code-img{
+  width:94px;
+  height:42px;
+  float:right;
+  cursor: pointer;
+}
+.login-info .li .code-img img{
+  width:100%;
+  height:100%;
+}
+.login-info .li .proving-code{
+  position: relative;
+  margin-right:104px;
+}
+
+.login-info .btn{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 5px;
+  padding: 0 15px;
+  font-family: "微软雅黑";
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.login-info .btn-blue{
+  width:100%;
+  height:42px;
+  line-height:42px;
+  border:none;
+  background: #6D93DF;
+  border-radius: 0px;
+  margin-top:-10px;
+  box-shadow: 0px 5px 10px 0 rgba(109,147,223,.5);
+}
+.login-info .btn-blue:hover,
+.login-info .btn-blue:focus{
+  color:#ffffff;
+}
+.login-body .login-right{
+  width:300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  -moz-justify-content: center;
+  -moz-align-items: center;
+  border-left:1px solid #E9E9E9;
+}
+.login-right .login-ewm{
+  text-align: center;
+}
+.login-right .login-ewm .ewm-img{
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  padding:10px;
+  margin:0 auto;
+}
+.login-right .login-ewm .ewm-img img{
+  width:145px;
+  height:145px;
+}
+.login-right .login-ewm .ewm-txt{
+  display: inline-block;
+  padding-top:15px;
+  color:#B8B8B8;
+  font-size: 14px;
+}
+/*登录页面 end*/
+
+/*大数据 start*/
+.dsj-login{
+  background:url(../../images/login/bg.jpg) 0 0 no-repeat;
+  background-size:100% 100%;
+}
+.dsj-login .ico-star1{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  width:788px;
+  height:788px;
+  background:url(../../images/login/center_center.png) 0 0 no-repeat;
+  background-size:100% 100%;
+}
+.dsj-login .ico-star2,
+.dsj-login .ico-star4{
+  position:absolute;
+  top:-50px;
+  left:-50px;
+  width:200px;
+  height:200px;
+  background:url(../../images/login/left_top.png) 0 0 no-repeat;
+  background-size:100% 100%;
+}
+.dsj-login .ico-star4{
+  top:100px;
+  left:auto;
+  right:50px;
+  background:url(../../images/login/right_bottom.png) 0 0 no-repeat;
+  background-size:100% 100%;
+}
+.dsj-login .ico-star3,
+.dsj-login .ico-star5{
+  position:absolute;
+  bottom:50px;
+  left:50px;
+  width:233px;
+  height:233px;
+  background:url(../../images/login/left_bottom.png) 0 0 no-repeat;
+  background-size:100% 100%;
+}
+.dsj-login .ico-star5{
+  bottom:-100px;
+  left:auto;
+  right:200px;
+  background:url(../../images/login/right_top.png) 0 0 no-repeat;
+  background-size:100% 100%;
+}
+.dsj-login .ico-star1{
+  animation: rotatecenter 500s linear infinite;
+  -moz-animation: rotatecenter 500s linear infinite; /* Firefox */
+  -webkit-animation: rotatecenter 500s linear infinite;  /* Safari 和 Chrome */
+  -o-animation: rotatecenter 500s linear infinite; /* Opera */
+}
+@keyframes rotatecenter
+{
+  0%   {transform:translate(-50%,-50%) rotate(0deg);}
+  50%  {transform:translate(-50%,-50%) rotate(360deg);}
+  100% {transform:translate(-50%,-50%) rotate(720deg);}
+}
+@-moz-keyframes rotatecenter /* Firefox */
+{
+  0%   {transform:translate(-50%,-50%) rotate(0deg);}
+  50%  {transform:translate(-50%,-50%) rotate(360deg);}
+  100% {transform:translate(-50%,-50%) rotate(720deg);}
+}
+@-webkit-keyframes rotatecenter /* Safari 和 Chrome */
+{
+  0%   {transform:translate(-50%,-50%) rotate(0deg);}
+  50%  {transform:translate(-50%,-50%) rotate(360deg);}
+  100% {transform:translate(-50%,-50%) rotate(720deg);}
+}
+.dsj-login .ico-star2,
+.dsj-login .ico-star3,
+.dsj-login .ico-star4,
+.dsj-login .ico-star5{
+  animation: rotate 300s linear infinite;
+  -moz-animation: rotate 300s linear infinite; /* Firefox */
+  -webkit-animation: rotate 300s linear infinite;  /* Safari 和 Chrome */
+  -o-animation: rotate 300s linear infinite; /* Opera */
+}
+@keyframes rotate
+{
+  0%   {transform:rotate(0deg);}
+  50%  {transform:rotate(360deg);}
+  100% {transform:rotate(720deg);}
+}
+@-moz-keyframes rotate /* Firefox */
+{
+  0%   {transform:rotate(0deg);}
+  50%  {transform:rotate(360deg);}
+  100% {transform:rotate(720deg);}
+}
+@-webkit-keyframes rotate /* Safari 和 Chrome */
+{
+  0%   {transform:rotate(0deg);}
+  50%  {transform:rotate(360deg);}
+  100% {transform:rotate(720deg);}
+}
+.dsj-login .platform-name{
+  color:#02e7ff;
+  font-size:25px;
+  position: absolute;
+  top:30px;
+  left:30px;
+}
+.dsj-login .login-block{
+  /*background: rgba(0,0,0,.3);*/
+}
+.dsj-login .login-pop{
+  width:490px;
+  background:rgba(0,0,0,.3);
+  box-shadow:none;
+}
+.dsj-login .login-body{
+  padding:35px 0;
+}
+.dsj-login .login-body .login-info{
+  float:none;
+  width:364px;
+  margin:0 auto;
+}
+.dsj-login .login-info .form-error{
+  top:-12px;
+  width: 358px;
+  line-height:24px;
+  margin:0;
+}
+.dsj-login .login-info .form-error .msg-error{
+  background:rgba(255,255,255,.8);
+  color: #ff5757;
+  border:none;
+  border-radius: 2px;
+  display: none;
+}
+.dsj-login .login-info .li{
+  padding: 6px 0px;
+  border-left:none;
+}
+.dsj-login .li .form-control{
+  height:50px;
+  color:#ffffff;
+  padding:3px 10px 0;
+  box-shadow:none;
+  background:rgba(0,0,0,.3);
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,.2);
+  margin-top:0;
+}
+.dsj-login .li .form-control::-webkit-input-placeholder { /* WebKit browsers */
+  color: rgba(255,255,255,.7);
+}
+.dsj-login .li .form-control::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: rgba(255,255,255,.7);
+}
+.dsj-login .li .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: rgba(255,255,255,.7);
+}
+.dsj-login .li .code-img{
+  height:46px;
+}
+.dsj-login .btn-blue{
+  height:50px;
+  line-height:50px;
+  background: #02dcff;
+  box-shadow:none;
+  border-radius: 5px;
+  margin-top:12px;
+}
+.dsj-login .foot-record{
+  position: absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  background:#000000;
+  color:#dddddd;
+  z-index: 100;
+}
+.dsj-login .foot-record .record-num{
+  color:#dddddd;
+}
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+#particles-js{
+  position:fixed;
+  top:35px;
+  left:0;
+  z-index:99;
+  width:100%;
+  height:100%;
+}
+/*大数据 end*/
+

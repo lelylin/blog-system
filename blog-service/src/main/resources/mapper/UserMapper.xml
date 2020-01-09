@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.danny.blog.dao.UserMapper">
+
+  <resultMap id="BaseResultMap" type="com.danny.blog.entity.User">
+    <id column="user_id" jdbcType="CHAR" property="userId" />
+    <result column="group_id" jdbcType="CHAR" property="groupId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_pwd" jdbcType="VARCHAR" property="userPwd" />
+    <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+    <result column="user_sex" jdbcType="VARCHAR" property="userSex" />
+    <result column="user_qq" jdbcType="VARCHAR" property="userQq" />
+    <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
+    <result column="user_address" jdbcType="VARCHAR" property="userAddress" />
+    <result column="user_mark" jdbcType="BIGINT" property="userMark" />
+    <result column="user_rank_id" jdbcType="CHAR" property="userRankId" />
+    <result column="user_last_login_ip" jdbcType="VARCHAR" property="userLastLoginIp" />
+    <result column="user_birthday" jdbcType="DATE" property="userBirthday" />
+    <result column="user_description" jdbcType="VARCHAR" property="userDescription" />
+    <result column="user_image_url" jdbcType="VARCHAR" property="userImageUrl" />
+    <result column="user_school" jdbcType="VARCHAR" property="userSchool" />
+    <result column="user_register_time" jdbcType="TIMESTAMP" property="userRegisterTime" />
+    <result column="user_register_ip" jdbcType="VARCHAR" property="userRegisterIp" />
+    <result column="user_last_login_time" jdbcType="TIMESTAMP" property="userLastLoginTime" />
+    <result column="user_weibo" jdbcType="VARCHAR" property="userWeibo" />
+    <result column="user_blood_type" jdbcType="CHAR" property="userBloodType" />
+    <result column="user_says" jdbcType="VARCHAR" property="userSays" />
+    <result column="user_lock" jdbcType="INTEGER" property="userLock" />
+    <result column="user_freeze" jdbcType="INTEGER" property="userFreeze" />
+    <result column="user_power" jdbcType="VARCHAR" property="userPower" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    user_id, group_id, user_name, user_pwd, user_phone, user_sex, user_qq, user_email, 
+    user_address, user_mark, user_rank_id, user_last_login_ip, user_birthday, user_description, 
+    user_image_url, user_school, user_register_time, user_register_ip, user_last_login_time, 
+    user_weibo, user_blood_type, user_says, user_lock, user_freeze, user_power
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where user_id = #{userId,jdbcType=CHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user
+    where user_id = #{userId,jdbcType=CHAR}
+  </delete>
+
+  <insert id="insert" parameterType="com.danny.blog.entity.User">
+    insert into user (user_id, group_id, user_name, 
+      user_pwd, user_phone, user_sex, 
+      user_qq, user_email, user_address, 
+      user_mark, user_rank_id, user_last_login_ip, 
+      user_birthday, user_description, user_image_url, 
+      user_school, user_register_time, user_register_ip, 
+      user_last_login_time, user_weibo, user_blood_type, 
+      user_says, user_lock, user_freeze, 
+      user_power)
+    values (#{userId,jdbcType=CHAR}, #{groupId,jdbcType=CHAR}, #{userName,jdbcType=VARCHAR}, 
+      #{userPwd,jdbcType=VARCHAR}, #{userPhone,jdbcType=VARCHAR}, #{userSex,jdbcType=VARCHAR}, 
+      #{userQq,jdbcType=VARCHAR}, #{userEmail,jdbcType=VARCHAR}, #{userAddress,jdbcType=VARCHAR}, 
+      #{userMark,jdbcType=BIGINT}, #{userRankId,jdbcType=CHAR}, #{userLastLoginIp,jdbcType=VARCHAR}, 
+      #{userBirthday,jdbcType=DATE}, #{userDescription,jdbcType=VARCHAR}, #{userImageUrl,jdbcType=VARCHAR}, 
+      #{userSchool,jdbcType=VARCHAR}, #{userRegisterTime,jdbcType=TIMESTAMP}, #{userRegisterIp,jdbcType=VARCHAR}, 
+      #{userLastLoginTime,jdbcType=TIMESTAMP}, #{userWeibo,jdbcType=VARCHAR}, #{userBloodType,jdbcType=CHAR}, 
+      #{userSays,jdbcType=VARCHAR}, #{userLock,jdbcType=INTEGER}, #{userFreeze,jdbcType=INTEGER}, 
+      #{userPower,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.danny.blog.entity.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="groupId != null">
+        group_id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="userPwd != null">
+        user_pwd,
+      </if>
+      <if test="userPhone != null">
+        user_phone,
+      </if>
+      <if test="userSex != null">
+        user_sex,
+      </if>
+      <if test="userQq != null">
+        user_qq,
+      </if>
+      <if test="userEmail != null">
+        user_email,
+      </if>
+      <if test="userAddress != null">
+        user_address,
+      </if>
+      <if test="userMark != null">
+        user_mark,
+      </if>
+      <if test="userRankId != null">
+        user_rank_id,
+      </if>
+      <if test="userLastLoginIp != null">
+        user_last_login_ip,
+      </if>
+      <if test="userBirthday != null">
+        user_birthday,
+      </if>
+      <if test="userDescription != null">
+        user_description,
+      </if>
+      <if test="userImageUrl != null">
+        user_image_url,
+      </if>
+      <if test="userSchool != null">
+        user_school,
+      </if>
+      <if test="userRegisterTime != null">
+        user_register_time,
+      </if>
+      <if test="userRegisterIp != null">
+        user_register_ip,
+      </if>
+      <if test="userLastLoginTime != null">
+        user_last_login_time,
+      </if>
+      <if test="userWeibo != null">
+        user_weibo,
+      </if>
+      <if test="userBloodType != null">
+        user_blood_type,
+      </if>
+      <if test="userSays != null">
+        user_says,
+      </if>
+      <if test="userLock != null">
+        user_lock,
+      </if>
+      <if test="userFreeze != null">
+        user_freeze,
+      </if>
+      <if test="userPower != null">
+        user_power,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=CHAR},
+      </if>
+      <if test="groupId != null">
+        #{groupId,jdbcType=CHAR},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userPwd != null">
+        #{userPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userPhone != null">
+        #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="userSex != null">
+        #{userSex,jdbcType=VARCHAR},
+      </if>
+      <if test="userQq != null">
+        #{userQq,jdbcType=VARCHAR},
+      </if>
+      <if test="userEmail != null">
+        #{userEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="userAddress != null">
+        #{userAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="userMark != null">
+        #{userMark,jdbcType=BIGINT},
+      </if>
+      <if test="userRankId != null">
+        #{userRankId,jdbcType=CHAR},
+      </if>
+      <if test="userLastLoginIp != null">
+        #{userLastLoginIp,jdbcType=VARCHAR},
+      </if>
+      <if test="userBirthday != null">
+        #{userBirthday,jdbcType=DATE},
+      </if>
+      <if test="userDescription != null">
+        #{userDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="userImageUrl != null">
+        #{userImageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="userSchool != null">
+        #{userSchool,jdbcType=VARCHAR},
+      </if>
+      <if test="userRegisterTime != null">
+        #{userRegisterTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userRegisterIp != null">
+        #{userRegisterIp,jdbcType=VARCHAR},
+      </if>
+      <if test="userLastLoginTime != null">
+        #{userLastLoginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userWeibo != null">
+        #{userWeibo,jdbcType=VARCHAR},
+      </if>
+      <if test="userBloodType != null">
+        #{userBloodType,jdbcType=CHAR},
+      </if>
+      <if test="userSays != null">
+        #{userSays,jdbcType=VARCHAR},
+      </if>
+      <if test="userLock != null">
+        #{userLock,jdbcType=INTEGER},
+      </if>
+      <if test="userFreeze != null">
+        #{userFreeze,jdbcType=INTEGER},
+      </if>
+      <if test="userPower != null">
+        #{userPower,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <!--根据ID更新用户信息-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.danny.blog.entity.User">
+    update user
+    <set>
+      <if test="groupId != null">
+        group_id = #{groupId,jdbcType=CHAR},
+      </if>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userPwd != null">
+        user_pwd = #{userPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userPhone != null">
+        user_phone = #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="userSex != null">
+        user_sex = #{userSex,jdbcType=VARCHAR},
+      </if>
+      <if test="userQq != null">
+        user_qq = #{userQq,jdbcType=VARCHAR},
+      </if>
+      <if test="userEmail != null">
+        user_email = #{userEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="userAddress != null">
+        user_address = #{userAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="userMark != null">
+        user_mark = #{userMark,jdbcType=BIGINT},
+      </if>
+      <if test="userRankId != null">
+        user_rank_id = #{userRankId,jdbcType=CHAR},
+      </if>
+      <if test="userLastLoginIp != null">
+        user_last_login_ip = #{userLastLoginIp,jdbcType=VARCHAR},
+      </if>
+      <if test="userBirthday != null">
+        user_birthday = #{userBirthday,jdbcType=DATE},
+      </if>
+      <if test="userDescription != null">
+        user_description = #{userDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="userImageUrl != null">
+        user_image_url = #{userImageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="userSchool != null">
+        user_school = #{userSchool,jdbcType=VARCHAR},
+      </if>
+      <if test="userRegisterTime != null">
+        user_register_time = #{userRegisterTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userRegisterIp != null">
+        user_register_ip = #{userRegisterIp,jdbcType=VARCHAR},
+      </if>
+      <if test="userLastLoginTime != null">
+        user_last_login_time = #{userLastLoginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userWeibo != null">
+        user_weibo = #{userWeibo,jdbcType=VARCHAR},
+      </if>
+      <if test="userBloodType != null">
+        user_blood_type = #{userBloodType,jdbcType=CHAR},
+      </if>
+      <if test="userSays != null">
+        user_says = #{userSays,jdbcType=VARCHAR},
+      </if>
+      <if test="userLock != null">
+        user_lock = #{userLock,jdbcType=INTEGER},
+      </if>
+      <if test="userFreeze != null">
+        user_freeze = #{userFreeze,jdbcType=INTEGER},
+      </if>
+      <if test="userPower != null">
+        user_power = #{userPower,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=CHAR}
+  </update>
+
+  <update id="updateByPrimaryKey" parameterType="com.danny.blog.entity.User">
+    update user
+    set group_id = #{groupId,jdbcType=CHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      user_pwd = #{userPwd,jdbcType=VARCHAR},
+      user_phone = #{userPhone,jdbcType=VARCHAR},
+      user_sex = #{userSex,jdbcType=VARCHAR},
+      user_qq = #{userQq,jdbcType=VARCHAR},
+      user_email = #{userEmail,jdbcType=VARCHAR},
+      user_address = #{userAddress,jdbcType=VARCHAR},
+      user_mark = #{userMark,jdbcType=BIGINT},
+      user_rank_id = #{userRankId,jdbcType=CHAR},
+      user_last_login_ip = #{userLastLoginIp,jdbcType=VARCHAR},
+      user_birthday = #{userBirthday,jdbcType=DATE},
+      user_description = #{userDescription,jdbcType=VARCHAR},
+      user_image_url = #{userImageUrl,jdbcType=VARCHAR},
+      user_school = #{userSchool,jdbcType=VARCHAR},
+      user_register_time = #{userRegisterTime,jdbcType=TIMESTAMP},
+      user_register_ip = #{userRegisterIp,jdbcType=VARCHAR},
+      user_last_login_time = #{userLastLoginTime,jdbcType=TIMESTAMP},
+      user_weibo = #{userWeibo,jdbcType=VARCHAR},
+      user_blood_type = #{userBloodType,jdbcType=CHAR},
+      user_says = #{userSays,jdbcType=VARCHAR},
+      user_lock = #{userLock,jdbcType=INTEGER},
+      user_freeze = #{userFreeze,jdbcType=INTEGER},
+      user_power = #{userPower,jdbcType=VARCHAR}
+    where user_id = #{userId,jdbcType=CHAR}
+  </update>
+
+  <!--根据用户名查询用户信息-->
+  <select id="selectByUserName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where user_name = #{userName,jdbcType=CHAR}
+  </select>
+</mapper>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加文章</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" th:href="@{/static/js/layui-v2.4.5/css/layui.css}">
+    <script type="text/javascript" th:src="@{/static/js/jQuery/jquery-3.3.1.js}"></script>
+    <script type="text/javascript" th:src="@{/static/js/layui-v2.4.5/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/static/wangEditor/wangEditor.js}"></script>
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <div class="layui-header" id="layui-header">
+        <div class="layui-logo">Danny博客</div>
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item"><a href="/index">Hi,Danny</a></li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item"><a href="/index">控制台</a></li>
+            <li class="layui-nav-item"><a href="/index">博客首页</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    Danny
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                    <dd><a href="">切换账号</a></dd>
+                    <dd><a href="">退出登录</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <!--列表展开状态-->
+                <!--<li class="layui-nav-item layui-nav-itemed">-->
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:">文章管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/articleSort/articleSortList">文章分类</a></dd>
+                        <dd><a href="/article/articleList">文章列表</a></dd>
+                        <dd><a href="">文章发布</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">用户管理</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:">解决方案</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:">列表一</a></dd>
+                        <dd><a href="javascript:">列表二</a></dd>
+                        <dd><a href="">超链接</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">评价管理</a></li>
+                <li class="layui-nav-item"><a href="">文章发布</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 内容主体区域 -->
+    <div class="layui-body">
+        <div>
+            <div style="padding: 15px;">
+                <div class="layui-row layui-col-space15">
+                    <div class="layui-col-md12">
+                        <div class="layui-card">
+                            <div class="layui-card-header">添加文章</div>
+                            <div class="layui-card-body">
+                                <!--<form class="layui-form" action="/article/addArticleJson" method="post">-->
+                                <form class="layui-form" action="" method="">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">文章标题</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="articleName" lay-verify="required"
+                                                   autocomplete="off" placeholder="请输入标题" class="layui-input">
+                                        </div>
+                                    </div>
+
+                                    <div class="layui-form-item layui-form-text">
+                                        <label class="layui-form-label">文章摘要</label>
+                                        <div class="layui-input-block">
+                                            <textarea name="articleSummary" placeholder="请输入内容" lay-verify="required"
+                                                      class="layui-textarea"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="layui-form-item">
+                                        <div class="layui-inline">
+                                            <label class="layui-form-label">文章分类</label>
+                                            <div class="layui-input-inline" style="position: relative;z-index: 100000;">
+                                                <select lay-verify="required" name="sortArticleId">
+                                                    <option value="">请选择分类</option>
+                                                    <option th:each="articleSort : ${articleSorts}"
+                                                            th:value="${articleSort.getSortArticleId()}"
+                                                            th:text="${articleSort.getSortArticleName()}">
+                                                        sortArticleName
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!--<div class="layui-inline">
+                                            <label class="layui-form-label">创建时间</label>
+                                            <div class="layui-input-inline">
+                                                <input type="text" name="createTime" id="date" lay-verify="date"
+                                                       placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                                            </div>
+                                        </div>-->
+                                    </div>
+
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">编辑器</label>
+                                        <div class="layui-input-block">
+                                            <!-- 加载编辑器的容器 -->
+                                            <div id="editor"></div>
+                                            <textarea class="layui-textarea layui-hide" name="articleContent"
+                                                      lay-verify="articleContent" id="articleContent">
+
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <button class="layui-btn" id="submit" lay-submit="" lay-filter="demo1">提交
+                                            </button>
+                                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // 实例化编辑器
+    var E = window.wangEditor;
+    var editor = new E('#editor');
+    // 或者 var editor = new E( document.getElementById('editor') )
+    editor.customConfig.uploadImgShowBase64 = true;   // 使用 base64 保存图片
+    // 通过onchange来实现 textarea 中提交富文本内容
+    var articleContent = $('#articleContent');
+    editor.customConfig.onchange = function (html) {
+        // 监控变化，同步更新到 textarea
+        articleContent.val(html);
+    };
+    editor.create();
+
+    layui.use('element', function () {
+        var element = layui.element;
+    });
+
+    layui.use(['form', 'laydate'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            laydate = layui.laydate;
+
+        //日期
+        laydate.render({
+            elem: '#date'
+        });
+
+        //监听提交
+        form.on('submit(demo1)', function (data) {
+            $.ajax({
+                url: "/article/addArticleJson",
+                type: "post",
+                data: data.field,
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    if (0 === data.code) {
+                        layer.msg("添加成功！");
+                        window.setTimeout(function () {
+                            window.location.href = "/article/articleList";
+                        }, 300)
+                    } else {
+                        layer.alert("添加失败,请稍后重试...");
+                    }
+                },
+                error: function () {
+                    layer.alert("加载失败,请稍后重试...");
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</body>
+</html>
